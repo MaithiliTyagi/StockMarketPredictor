@@ -7,6 +7,11 @@ from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+# import tensorflow as tf
+tf.compat.v1.enable_eager_execution()
+
 
 # Function to fetch historical stock data
 def get_stock_data(ticker, period='1y'):
